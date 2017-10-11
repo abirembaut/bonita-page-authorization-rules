@@ -16,6 +16,7 @@ Having a JDK 1.7 or > and Maven 3 installed Just run the command :
     
 ## Usage
 - Retrieve the jar file in the target/ directory of the project and put it at the same place as bonita-server-*.jar
-- Using the setup tool to retrieve and push your tenant configuration: 
-  - declare the 2 beans in bonita-tenants-custom.xml (just like it is done in the example provided in the conf directory of this project)
-  - set the property `bonita.tenant.authorization.rule.mapping` to `authorizationRuleMappingWithProfile` in bonita-tenant-community-custom.properties
+- Using the setup tool, retrieve your tenant configuration
+- Declare the 2 beans in bonita-tenants-custom.xml (just like it is done in the example provided in the conf directory of this project)
+- Set the property `bonita.tenant.authorization.rule.mapping` to `authorizationRuleMappingWithProfile` in bonita-tenant-community-custom.properties
+- Using the setup tool, push your tenant configuration
