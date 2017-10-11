@@ -39,7 +39,7 @@ import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
 @RunWith(MockitoJUnitRunner.class)
-public class IsProfileMemberRuleTest {
+public class HasProfileRuleTest {
     
     @Mock
     ProfileService profileService;
@@ -50,11 +50,11 @@ public class IsProfileMemberRuleTest {
     @Mock
     SessionAccessor sessionAccessor;
     
-    IsProfileMemberRule isProfileMemberRule;
+    HasProfileRule isProfileMemberRule;
     
     @Before
     public void init() throws Exception {
-        isProfileMemberRule = spy(new IsProfileMemberRule(profileService, sessionService, sessionAccessor));
+        isProfileMemberRule = spy(new HasProfileRule(profileService, sessionService, sessionAccessor));
         doReturn("My profile").when(isProfileMemberRule).getProfileName();
         doReturn(2L).when(isProfileMemberRule).getLoggedUserId();
     }

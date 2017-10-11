@@ -53,7 +53,7 @@
     <bean id="authorizationRuleMappingWithProfile"
           class="org.bonitasoft.pages.authorization.AuthorizationRuleMappingWithProfile"/>
 
-    <bean id="isProfileMemberRule" class="org.bonitasoft.pages.authorization.IsProfileMemberRule">
+    <bean id="hasProfileRule" class="org.bonitasoft.pages.authorization.HasProfileRule">
         <constructor-arg name="sessionAccessor" ref="sessionAccessor"/>
         <constructor-arg name="sessionService" ref="sessionService"/>
         <constructor-arg name="profileService" ref="profileService"/>

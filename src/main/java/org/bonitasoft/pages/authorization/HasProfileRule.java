@@ -34,9 +34,9 @@ import org.bonitasoft.engine.sessionaccessor.SessionAccessor;
  * @author Anthony Birembaut
  *
  */
-public class IsProfileMemberRule extends AuthorizationRuleWithParameters implements AuthorizationRule {
+public class HasProfileRule extends AuthorizationRuleWithParameters implements AuthorizationRule {
 
-    static final String IS_PROFILE_MEMBER_RULE = "IS_PROFILE_MEMBER_RULE";
+    public static final String KEY = "HAS_PROFILE_RULE";
 
     ProfileService profileService;
 
@@ -46,14 +46,14 @@ public class IsProfileMemberRule extends AuthorizationRuleWithParameters impleme
     
     String profileName;
 
-    public IsProfileMemberRule(ProfileService profileService, SessionService sessionService, SessionAccessor sessionAccessor) {
+    public HasProfileRule(ProfileService profileService, SessionService sessionService, SessionAccessor sessionAccessor) {
         this.profileService = profileService;
         this.sessionService = sessionService;
         this.sessionAccessor = sessionAccessor;
     }
     
     public String getId() {
-        return IS_PROFILE_MEMBER_RULE;
+        return KEY;
     }
 
     public boolean isAllowed(String key, Map<String, Serializable> context) throws SExecutionException {

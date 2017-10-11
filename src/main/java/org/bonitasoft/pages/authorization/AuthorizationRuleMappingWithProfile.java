@@ -29,13 +29,13 @@ public class AuthorizationRuleMappingWithProfile extends AuthorizationRuleMappin
 
     public List<String> getProcessOverviewRuleKeys() {
         List<String> processOverviewRuleKeys = new ArrayList<String>(super.getProcessOverviewRuleKeys());
-        processOverviewRuleKeys.add(IsProfileMemberRule.IS_PROFILE_MEMBER_RULE);
+        processOverviewRuleKeys.add(HasProfileRule.KEY);
         return processOverviewRuleKeys;
     }
 
     public List<String> getTaskRuleKeys() {
         List<String> taskRuleKeys = new ArrayList<String>(super.getTaskRuleKeys());
-        taskRuleKeys.add(IsProfileMemberRule.IS_PROFILE_MEMBER_RULE);
+        taskRuleKeys.add(HasProfileRule.KEY);
         return taskRuleKeys;
     }
 
